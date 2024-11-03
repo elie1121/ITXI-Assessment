@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import {View , Text, Pressable, StyleSheet} from 'react-native';
 import styles from '../styles';
 import Button from '../../components/Button';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
 import PickVoiceScreen from '../onboardingScreens/PickVoiceScreen';
 import SettingsStackNavigator from '../../navigation/SettingsStackNavigator';

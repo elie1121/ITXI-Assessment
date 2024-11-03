@@ -9,7 +9,7 @@ const OnBoardingStackNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen options={{title:"Welcome Screen"}} name="WelcomeScreen" component={WelcomeScreen} />
-      <Stack.Screen options={{title:"Enter Company Id Screen"}} name="EnterCompanyIdScreen" component={EnterCompanyIdScreen} />
+      <Stack.Screen options={{title:"Enter Company Id Screen"}} name="EnterCompanyIdScreen" component={EnterCompanyIdScreen}  />
       <Stack.Screen options={{title:"Pick Voice Screen"}} name="PickVoiceScreen" component={PickVoiceScreen} />
     </Stack.Navigator>
   );

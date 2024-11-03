@@ -13,7 +13,7 @@ const WelcomeScreen = () => {
   return (
     <View style={styles.mainView}>
         <Text style={styles.screenTitleText}>Welcome Screen</Text>
-        <Button text="Get Started" onPress={()=>navigation.push("EnterCompanyIdScreen")}/>
+        <Button text="Get Started" onPress={()=>navigation.push("EnterCompanyIdScreen",{insideOnboardingStack:true})}/>
     </View>
   );
 };
