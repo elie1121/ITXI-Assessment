@@ -9,9 +9,11 @@ import WelcomeScreen from './src/screens/onboardingScreens/WelcomeScreen';
 
 import MainScreen from './src/screens/mainScreens/MainScreen';
 
+import Navigation from './src/navigation';
+import { NavigationContainer } from '@react-navigation/native';
 const App = () => {
   return (
-    <MainScreen />
+    <Navigation />
   );
 };
 
