@@ -5,7 +5,7 @@ import Button from '../../components/Button';
 import CustomInput from '../../components/CustomInput/CustomInput';
 import {useNavigation} from '@react-navigation/native';
 
-const EnterCompanyIdScreen = () => {
+const EnterCompanyIdScreen = ({insideOnboardingStack=false}) => {
   
   const navigation = useNavigation();
 
@@ -13,7 +13,9 @@ const EnterCompanyIdScreen = () => {
     <View style={styles.mainView}>
         <Text style={styles.screenTitleText}>Enter company Id</Text>
         <CustomInput placeHolder='Company ID'/>
-        <Button text='Continue' onPress={()=>navigation.push("PickVoiceScreen")}/>
+        {insideOnboardingStack?? // to only show this button in the onboarding navigator
+          <Button text='Continue' onPress={()=>navigation.push("PickVoiceScreen")}/> 
+        }
     </View>
   );
 };

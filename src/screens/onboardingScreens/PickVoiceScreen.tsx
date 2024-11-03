@@ -8,10 +8,17 @@ const PickVoiceScreen = () => {
 
   const navigation = useNavigation();
 
+  const handleDismiss = () => {
+    navigation.reset({
+        index: 0, 
+        routes: [{ name: 'MainScreen' }], 
+    })
+  };
+
   return (
     <View style={styles.mainView}>
         <Text style={styles.screenTitleText}>Pick Voice Screen</Text>
-        <Button text='Dismiss' />
+        <Button text='Dismiss' onPress={()=>handleDismiss()}/>
     </View>
   );
 };
