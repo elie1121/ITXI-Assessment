@@ -7,6 +7,8 @@ export default StyleSheet.create({
         padding:10
     },
     screenTitleText:{
-        textAlign:'center'
+        textAlign:'center',
+        fontSize:18,
+        fontWeight:'600'
     }
 });

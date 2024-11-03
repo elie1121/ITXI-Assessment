@@ -4,7 +4,7 @@ export default StyleSheet.create({
     textInput:{
         borderWidth:1,
         borderRadius:5,
-        margin:5
+        margin:5,
     },
    
 });
