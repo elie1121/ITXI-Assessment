@@ -2,18 +2,27 @@ import React from 'react';
 import {View , Text } from 'react-native';
 import styles from '../styles';
 import Button from '../../components/Button';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation,useRoute} from '@react-navigation/native';
 
 const PickVoiceScreen = () => {
 
   const navigation = useNavigation();
 
+  const route = useRoute();
+
+  const {insideOnboardingStack} = route?.params || false;
+
   const handleDismiss = () => {
-    navigation.reset({
-        index: 0, 
-        routes: [{ name: 'MainScreen' }], 
-    })
+    if(insideOnboardingStack){
+        navigation.reset({
+            index: 0, 
+            routes: [{ name: 'MainScreen' }], 
+        })
+    }else{
+        navigation.goBack();
+    }
   };
+  
 
   return (
     <View style={styles.mainView}>

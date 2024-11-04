@@ -9,7 +9,7 @@ const EnterCompanyIdScreen = () => {
   
   const navigation = useNavigation();
   const route = useRoute();
-  
+
   const {insideOnboardingStack} = route?.params || false;
 
   return (
@@ -17,7 +17,7 @@ const EnterCompanyIdScreen = () => {
         <Text style={styles.screenTitleText}>Enter company Id</Text>
         <CustomInput placeHolder='Company ID'/>
         {insideOnboardingStack? // to only show this button in the onboarding navigator
-          <Button text='Continue' onPress={()=>navigation.push("PickVoiceScreen")}/>
+          <Button text='Continue' onPress={()=>navigation.push("PickVoiceScreen",{insideOnboardingStack:true})}/>
           :"" 
         }
     </View>
