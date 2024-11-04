@@ -3,11 +3,11 @@ import {View , Text} from 'react-native';
 import styles from '../styles';
 import Button from '../../components/Button';
 
-const VoicebotScreen = () => {
+const VoicebotScreen = ({onDismiss}) => {
   return (
     <View style={styles.mainView}>
         <Text style={styles.screenTitleText}>Voicebot Screen</Text>
-        <Button text="Dismiss"/>
+        <Button text="Dismiss" onPress={()=>onDismiss()}/>
     </View>
   );
 };
