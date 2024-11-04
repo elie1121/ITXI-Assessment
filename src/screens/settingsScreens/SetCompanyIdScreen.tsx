@@ -8,6 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 const SetCompanyIdScreen = () => {
   const navigation = useNavigation();
 
+
   return (
     <View style={styles.mainView}>
         <Text style={styles.screenTitleText}>Set Company Id</Text>
