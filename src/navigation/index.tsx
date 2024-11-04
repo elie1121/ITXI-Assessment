@@ -1,8 +1,10 @@
+import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainScreen from "../screens/mainScreens/MainScreen";
 import OnBoardingStackNavigator from "./OnBoardingStackNavigator";
 import SetCompanyIdScreen from "../screens/settingsScreens/SetCompanyIdScreen";
+import SplashScreen from "../screens/SplashScreen";
 const Stack = createNativeStackNavigator();
 const Navigation = () => {
 
@@ -14,6 +16,22 @@ const Navigation = () => {
             }
         }
     }
+
+    const [isSplashScreenVisible, setIsSplashScreenVisible] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsSplashScreenVisible(false); 
+        }, 3000); 
+
+        return () => clearTimeout(timer);
+    }, []);
+
+
+    if (isSplashScreenVisible){
+        return <SplashScreen />
+    }
+
     return(
         <NavigationContainer linking={linking}>
             <Stack.Navigator >
