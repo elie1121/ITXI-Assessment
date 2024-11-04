@@ -10,7 +10,7 @@ const SettingsScreen = () => {
   return (
     <View style={styles.mainView}>
         <Text style={styles.screenTitleText}>Settings</Text>
-        <Button text='Set Company ID' onPress={()=>navigation.push("SetCompanyIdScreen")}/>
+        <Button text='Set Company ID' onPress={()=>navigation.push("SetCompanyIdScreen",{insideSettingsStack:true})}/>
         <Button text='Pick Voice' onPress={()=>navigation.push("PickVoiceScreen")}/>
     </View>
   );
